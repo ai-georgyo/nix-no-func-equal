@@ -8,7 +8,7 @@
     # The nixpkgs tree that the apps evaluate. Kept separate from `nixpkgs` so
     # it can be bumped (`nix flake update nixpkgs-eval`) without rebuilding Nix.
     nixpkgs-eval = {
-      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+      url = "github:glittershark/nixpkgs/no-function-pointer-equality";
       flake = false;
     };
 

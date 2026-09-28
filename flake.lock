@@ -67,16 +67,16 @@
     "nixpkgs-eval": {
       "flake": false,
       "locked": {
-        "lastModified": 1790510107,
-        "narHash": "sha256-EVMNYv7hYDDD9TGVT/hIyTYgpiXA8y3m5xIEIxuGNU0=",
-        "owner": "NixOS",
+        "lastModified": 1790589827,
+        "narHash": "sha256-MwbAlbIvKlalems/cpEmn+n9ypfJiECtL9ufxXWZuFY=",
+        "owner": "glittershark",
         "repo": "nixpkgs",
-        "rev": "3181085bfd08663b6b9e60bc7a8395c2aaa741bd",
+        "rev": "bd22f0dcef0312ac43dd5c84f21d41dbbba32a99",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
+        "owner": "glittershark",
+        "ref": "no-function-pointer-equality",
         "repo": "nixpkgs",
         "type": "github"
       }
