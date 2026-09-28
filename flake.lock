@@ -20,11 +20,11 @@
     "nix-fork": {
       "flake": false,
       "locked": {
-        "lastModified": 1790585255,
-        "narHash": "sha256-NiDHeBPIrKahFfjwErTChnj6GGDS6GWTtnYwLEUKHnA=",
+        "lastModified": 1790587468,
+        "narHash": "sha256-7DLqFdwoKNgM9faqUeyBncYsJsu/3lkNuE3eX2pG8B0=",
         "owner": "glittershark",
         "repo": "nix",
-        "rev": "0b15335c5c49ea7e123baee85c6c44700773fca7",
+        "rev": "f35b2156043a1949325a28452bfcd1c1fe8fdc87",
         "type": "github"
       },
       "original": {

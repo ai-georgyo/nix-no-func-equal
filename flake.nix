@@ -80,7 +80,7 @@
       # evaluates). Any arguments replace the default job set, e.g.
       #   nix run .#eval-fork -- --expr '(import <nixpkgs> {}).hello'
       mkEvalApp =
-        pkgs: name: nej:
+        pkgs: name: nej: extraArgs:
         pkgs.writeShellApplication {
           name = "nix-eval-jobs-${name}-nixpkgs";
           runtimeInputs = [ nej ];
@@ -94,6 +94,7 @@
               --max-memory-size "$max_memory"
               --option allow-import-from-derivation false
               -I "nixpkgs=$nixpkgs"
+              ${lib.escapeShellArgs extraArgs}
             )
 
             if [ "$#" -eq 0 ]; then
@@ -128,14 +129,19 @@
         pkgs:
         let
           p = self.packages.${pkgs.stdenv.hostPlatform.system};
-          mkApp = name: nej: {
+          mkApp = name: nej: extraArgs: {
             type = "app";
-            program = lib.getExe (mkEvalApp pkgs name nej);
+            program = lib.getExe (mkEvalApp pkgs name nej extraArgs);
           };
         in
         {
-          eval-upstream = mkApp "upstream" p.nix-eval-jobs-upstream;
-          eval-fork = mkApp "fork" p.nix-eval-jobs-fork;
+          eval-upstream = mkApp "upstream" p.nix-eval-jobs-upstream [ ];
+          # The fork keeps upstream behaviour unless this setting is turned off.
+          eval-fork = mkApp "fork" p.nix-eval-jobs-fork [
+            "--option"
+            "function-pointer-equality"
+            "false"
+          ];
         }
       );
     };
