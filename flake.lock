@@ -1,0 +1,96 @@
+{
+  "nodes": {
+    "nix-eval-jobs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787808372,
+        "narHash": "sha256-0P6p+bjwWDjqiQYMSnTzCORmRK8BepiSZcJfWYpMZrk=",
+        "owner": "nix-community",
+        "repo": "nix-eval-jobs",
+        "rev": "fac7fd145be1cacbb7859039d6874120c05b057c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "nix-next",
+        "repo": "nix-eval-jobs",
+        "type": "github"
+      }
+    },
+    "nix-fork": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790585255,
+        "narHash": "sha256-NiDHeBPIrKahFfjwErTChnj6GGDS6GWTtnYwLEUKHnA=",
+        "owner": "glittershark",
+        "repo": "nix",
+        "rev": "0b15335c5c49ea7e123baee85c6c44700773fca7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "glittershark",
+        "ref": "no-function-pointer-equality",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
+    "nix-upstream": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790527820,
+        "narHash": "sha256-SqNzZv1QA62Kdk3wGukaWYiQfwDXyC0jtK2Th6vRe3E=",
+        "owner": "NixOS",
+        "repo": "nix",
+        "rev": "c621c2b3727700e439d4c3e5bff3ce5b35a24851",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nix",
+        "rev": "c621c2b3727700e439d4c3e5bff3ce5b35a24851",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1790510107,
+        "narHash": "sha256-KveNUoALIFda3G7m2VWk38jiTIky80vwY3h9gGOoF2g=",
+        "rev": "3181085bfd08663b6b9e60bc7a8395c2aaa741bd",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1080404.3181085bfd08/nixexprs.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz"
+      }
+    },
+    "nixpkgs-eval": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790510107,
+        "narHash": "sha256-EVMNYv7hYDDD9TGVT/hIyTYgpiXA8y3m5xIEIxuGNU0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3181085bfd08663b6b9e60bc7a8395c2aaa741bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nix-eval-jobs": "nix-eval-jobs",
+        "nix-fork": "nix-fork",
+        "nix-upstream": "nix-upstream",
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-eval": "nixpkgs-eval"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
